@@ -3,4 +3,4 @@ function foo(a: number, b: number) {
 }
 
 console.log("hello");
-console.log(foo(5, 8));
+console.log(foo(20, 80));
