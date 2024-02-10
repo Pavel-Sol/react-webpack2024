@@ -1,102 +1,21 @@
+import SvgIcon from '@/assets/exit-svgrepo-com.svg';
+
 const About = () => {
+  if (__PLATFORM__ === 'desktop') {
+    return <div>ISDESKTOPPLATFORM</div>;
+  }
+
+  if (__PLATFORM__ === 'mobile') {
+    return <div>ISMOBILEPLATFORM</div>;
+  }
+
   return (
     <div>
       <h1>About</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum molestias commodi
-        numquam dolorum pariatur laudantium et qui laborum minima? Minus ipsum eligendi temporibus,
-        fugit corrupti blanditiis dignissimos! Illo, minima facere?
-      </p>
+
+      <SvgIcon width={50} height={50} style={{ color: 'green' }} />
+
+      <p>{__PLATFORM__}</p>
     </div>
   );
 };
