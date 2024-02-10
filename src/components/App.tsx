@@ -1,14 +1,15 @@
 import { useState } from "react";
 import css from "./App.module.scss";
+import { Link, Outlet } from "react-router-dom";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <div className={css.container}>
       <p>App111</p>
-      <h1>{count}</h1>
-      <button onClick={() => setCount((prev) => prev + 1)}>+</button>
+      <Link to={`/`}>main</Link> <br />
+      <Link to={`/about`}>about</Link> <br />
+      <Link to={`/shop`}>shop</Link>
+      <Outlet />
     </div>
   );
 };

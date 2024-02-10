@@ -16,11 +16,12 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
     module: {
       rules: buildLoaders(options),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
 
     entry: paths.entry,
     output: {
       filename: "[name].[fullhash].js",
+      chunkFilename: "[name].[contenthash].js",
       path: paths.output,
       clean: true,
     },

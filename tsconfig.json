@@ -22,7 +22,10 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
   },
 
   "ts-node": {
