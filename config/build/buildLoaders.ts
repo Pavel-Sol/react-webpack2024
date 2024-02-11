@@ -8,9 +8,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   const scssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-      // Creates `style` nodes from JS strings
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
       {
         loader: 'css-loader',
         options: {
@@ -19,7 +17,6 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
           },
         },
       },
-      // Compiles Sass to CSS
       'sass-loader',
     ],
   };
@@ -35,6 +32,21 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         },
       },
     ],
+  };
+
+  const babelLoader = {
+    test: /\.tsx?$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          '@babel/preset-env',
+          '@babel/preset-typescript',
+          ['@babel/preset-react', { runtime: isDev ? 'automatic' : 'classic' }],
+        ],
+      },
+    },
   };
 
   const assetLoader = {
@@ -64,5 +76,11 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
     ],
   };
 
-  return [scssLoader, tsLoader, assetLoader, svgrLoader];
+  return [
+    scssLoader,
+    // tsLoader,
+    babelLoader,
+    assetLoader,
+    svgrLoader,
+  ];
 }
